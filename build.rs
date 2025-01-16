@@ -6,7 +6,7 @@ fn main() {
         .build();
     println!("cargo:rustc-link-search={}/build", dst.display());
     println!("cargo:rustc-link-lib=static=treelite_static");
-    println!("cargo:rustc-link-lib=gomp");
+    println!("cargo:rustc-link-lib=omp");
     #[cfg(target_os = "linux")]
     {
         println!("cargo:rustc-link-lib=stdc++");

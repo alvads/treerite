@@ -184,7 +184,12 @@ impl Model {
     }
 
     #[throws(TreeRiteError)]
-    pub fn predict<A, D>(&self, config: &GTIConfig, input: &Array<A, D>, num_rows: Option<usize>) -> ArrayD<A>
+    pub fn predict<A, D>(
+        &self,
+        config: &GTIConfig,
+        input: &Array<A, D>,
+        num_rows: Option<usize>,
+    ) -> ArrayD<A>
     where
         A: TypeName + Clone + Zero,
         D: Dimension,
